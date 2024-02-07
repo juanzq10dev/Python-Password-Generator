@@ -1,0 +1,27 @@
+name: Create and run python wheel 
+
+on: 
+  push: 
+    branches: [ main ]
+
+jobs: 
+  create-and-run-wheel: 
+    runs-on: ubuntu-lastest
+
+    steps: 
+    - name: Checkout code
+      uses: actions/checkout@v3
+    
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with: 
+        python-version: '3.10'
+        
+    - name: Run setup file
+      run: python ./setup.py bdist_wheel
+
+    - name: Installing whell 
+      run: pip install ./dist/password_generator-1.0-py3-none-any.whl
+
+    - name: Verify that library is correctly installed
+      run: python ./test/test.py
