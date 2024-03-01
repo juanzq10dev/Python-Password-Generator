@@ -8,4 +8,4 @@ jobs:
   create-and-run-wheel: 
     uses: juanzq10dev/workflows/.github/workflows/build-python-wheel.yml@main
     with: 
-        wheel-name: hello
+        wheel-name: Hi
