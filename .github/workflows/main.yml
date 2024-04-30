@@ -6,7 +6,7 @@ on:
 
 jobs: 
   create-and-run-wheel: 
-    uses: juanzq10dev/workflows/.github/workflows/build-python-wheel.yml@main
+    uses: juanzq10dev/workflows/.github/workflows/main.yml@main
     with: 
         wheel-name: Hi
-  
+        
