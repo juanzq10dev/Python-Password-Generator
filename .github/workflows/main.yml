@@ -2,7 +2,7 @@ name: Create and run python wheel
 
 on: 
   push: 
-    branches: [ main ]
+    branches: main 
 
 jobs: 
   create-and-run-wheel: 
