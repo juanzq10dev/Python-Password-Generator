@@ -11,4 +11,9 @@ jobs:
     uses: juanzq10dev/workflows/.github/workflows/main.yml@main
     with: 
         wheel-name: Hi
-        
+  print-current-branch: 
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Print current branch
+        run: |
+          echo "${{ github.ref }}" 
